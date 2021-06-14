@@ -11,18 +11,22 @@ class RRTMap:
 
         self.MapWindowName='RRT Path Planning'
         pygame.display.set_caption(self.MapWindowName)
-        self.map=pygame.display.set_mode((self.Mapw,self.Maph))
-        self.map.fill((255,255,255))
-        self.nodeRad=0
-        self.nodeThickness=0
-        self.edgeThickness=1
+        self.map=pygame.display.set_mode((self.Mapw, self.Maph))
+        self.map.fill((255, 255, 255))
+        self.nodeRad = 0
+        self.nodeThickness = 0
+        self.edgeThickness = 1
 
-        self.obstacles=[]
-        self.obsdim=obsdim
-        self.obsNumber=obsnum
+        self.obstacles = []
+        self.obsdim = obsdim
+        self.obsNumber = obsnum
 
-        self.grey=(70,70,70)
-        self.Blue = (0,0,255)
+        self.grey = (70, 70, 70)
+        self.Blue = (0, 0, 255)
+        self.Green = (0, 255, 0)
+        self.Red = (255, 0, 0)
+        self.white = (255, 255, 255)
+
 
     def drawMap(self):
         pass
@@ -34,8 +38,12 @@ class RRTMap:
         pass
 
 class RRTGraph:
-    def __init__(self):
-        pass
+    def __init__(self,start,goal,MapDimensions,obsdim,obsnum):
+        (x,y) = start
+        self.start = start
+        self.goal = goal
+        self.goalFlag = False
+        self.Maph
 
     def makeRandomRect(self):
         pass
