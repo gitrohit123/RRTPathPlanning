@@ -38,12 +38,25 @@ class RRTMap:
         pass
 
 class RRTGraph:
-    def __init__(self,start,goal,MapDimensions,obsdim,obsnum):
-        (x,y) = start
+    def __init__(self, start, goal, MapDimensions, obsdim, obsnum):
+        (x, y) = start
         self.start = start
         self.goal = goal
         self.goalFlag = False
-        self.Maph
+        self.Maph, self.Mapw = MapDimensions
+        self.x = []
+        self.y = []
+        self.parent = []
+        self.x.append(x)
+        self.y.append(y)
+        self.parent.append(0)
+
+        self.obstacles = []
+        self.obsDim = obsdim
+        self.obsNum = obsnum
+
+        self.goalstate = None
+        self.path = []
 
     def makeRandomRect(self):
         pass
